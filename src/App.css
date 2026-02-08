@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  background:
+    linear-gradient(
+      rgba(255, 117, 140, 0.75),
+      rgba(255, 126, 179, 0.75)
+    ),
+    url("/fondo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: white;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.photo {
+  width: 80%;
+  max-width: 280px;
+  margin-top: 20px;
+}
+
+
+
+button {
+  padding: 16px 28px;
+  font-size: 1.4rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.yes {
+  background-color: #ff4d6d;
+  color: white;
+  margin-bottom: 80px;
+  z-index: 2;
+}
+
+.no {
+  background-color: #6c757d;
+  color: white;
+  position: absolute;
+  z-index: 1;
+}
+  
+.love {
+  font-size: 2.6rem;
+  color: white;
+  animation: pop 0.8s infinite alternate;
+}
+
+.message {
+  font-size: 1.3rem;
+  color: white;
+  margin: 20px 0;
+}
+
+.hearts {
+  font-size: 3rem;
+  animation: float 2s infinite;
+}
+
+@keyframes pop {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
