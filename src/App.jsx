@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import "./App.css";
 
 function App() {
@@ -23,12 +23,11 @@ function App() {
     setYesSize(yesSize + 0.2);
   };
 
-  const handleYes = () => {
-    const audio = audioRef.current;
-    if (audio) {
-      audio.currentTime = 0;
-      audio.play().catch(() => {});
-    }
+ const handleYes = () => {
+    const sound = new Audio("/love.mp3");
+    sound.volume = 0.8;
+    sound.play();
+
     setAccepted(true);
   };
 
@@ -58,7 +57,7 @@ function App() {
   return (
     <div className="container">
       <h1 className="title">
-        ¿Quieres ser mi<br /> Valentine? 💘
+        ¿Quieres ser mi<br /> san Valentine? 💘
       </h1>
 
       <button
