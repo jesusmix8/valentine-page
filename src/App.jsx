@@ -6,8 +6,6 @@ function App() {
   const [accepted, setAccepted] = useState(false);
   const [noPosition, setNoPosition] = useState({ top: "60%", left: "50%" });
 
-  const audioRef = useRef(null);
-
   const moveNoButton = () => {
     const maxX = window.innerWidth - 120;
     const maxY = window.innerHeight - 60;
@@ -23,7 +21,7 @@ function App() {
     setYesSize(yesSize + 0.2);
   };
 
- const handleYes = () => {
+  const handleYes = () => {
     const sound = new Audio("/love.mp3");
     sound.volume = 0.8;
     sound.play();
@@ -31,33 +29,27 @@ function App() {
     setAccepted(true);
   };
 
-
-
   if (accepted) {
-  return (
-    <div className="container">
+    return (
+      <div className="container">
+        <p className="message">
+          Sabía que dirías que sí 🥰<br />
+          Te veo 13 de febrero 5:00 pm 💘
+        </p>
 
-      <p className="message">
-        Sabía que dirías que sí 🥰<br />
-        Te veo 13 de febrero 5:00 pm💘
-      </p>
-
-      {/* Imagen que aparece abajo */}
-      <img
-        src="/foto.png"
-        alt="Nosotros 💖"
-        className="photo yes-photo"
-      />
-
-    </div>
-  );
-}
-
+        <img
+          src="/foto.png"
+          alt="Nosotros 💖"
+          className="photo yes-photo"
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="container">
       <h1 className="title">
-        ¿Quieres ser mi<br /> san Valentine? 💘
+        ¿Quieres ser mi<br /> San Valentine? 💘
       </h1>
 
       <button
@@ -76,9 +68,6 @@ function App() {
       >
         No 💔
       </button>
-
-      {/* Audio oculto */}
-      <audio ref={audioRef} src="/love.mp3" preload="auto" />
     </div>
   );
 }
