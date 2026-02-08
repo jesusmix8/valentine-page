@@ -23,7 +23,7 @@ function App() {
 
   const handleYes = () => {
     const sound = new Audio("/love.mp3");
-    sound.volume = 0.8;
+    sound.volume = 1;
     sound.play();
 
     setAccepted(true);
@@ -42,6 +42,11 @@ function App() {
           alt="Nosotros 💖"
           className="photo yes-photo"
         />
+        
+
+        <p className="message">
+          Hecho por Jesús E. S. con ❤️
+        </p>
       </div>
     );
   }
@@ -57,7 +62,7 @@ function App() {
         style={{ transform: `scale(${yesSize})` }}
         onClick={handleYes}
       >
-        Sí 💖
+        Sí 
       </button>
 
       <button
@@ -66,7 +71,7 @@ function App() {
         onTouchStart={moveNoButton}
         onMouseEnter={moveNoButton}
       >
-        No 💔
+        No 
       </button>
     </div>
   );
