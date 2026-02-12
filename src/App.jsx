@@ -34,7 +34,7 @@ function App() {
       <div className="container">
         <p className="message">
           Sabía que dirías que sí 🥰<br />
-          Te veo 13 de febrero 5:00 pm 💘
+          Te veo el 14 de febrero 
         </p>
 
         <img
@@ -45,7 +45,7 @@ function App() {
         
 
         <p className="message">
-          Hecho por Jesús E. S. con ❤️
+          Hecho por Ken con ❤️
         </p>
       </div>
     );
